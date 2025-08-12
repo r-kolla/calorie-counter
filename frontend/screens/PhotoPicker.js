@@ -39,7 +39,7 @@ export default function PhotoPicker({ onMealAdded }) {
         type: 'image/jpeg',
       });
 
-      const response = await fetch(`${BACKEND_URL}/api/meals/upload/`, {
+      const response = await fetch(`${BACKEND_URL}/api/upload-meal-image/`,  {
         method: 'POST',
         body: formData,
         headers: {
