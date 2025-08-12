@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-k2bxoo3ptoo6xvysnyzqcnwebah#ix8l%i$2o6-g4_nxljftb1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['calorie-counter-edsj.onrender.com']
 
 
 # Application definition
