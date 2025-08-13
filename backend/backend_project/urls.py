@@ -18,10 +18,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.http import JsonResponse
+
+def root_view(request):
+    return JsonResponse({"message": "API is running!"})
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('meals.urls')),
+    path('', root_view), 
 ]
 
 if settings.DEBUG:
