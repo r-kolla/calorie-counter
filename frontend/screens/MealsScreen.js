@@ -24,12 +24,13 @@ export default function MealsScreen() {
   }
 
   function renderMeal({ item }) {
-    // Construct image URL carefully
-    const imageUrl = item.image
-      ? item.image.startsWith('http')
-        ? item.image
-        : `${BACKEND_URL}${item.image}`
-      : null;
+    // Construct image URL carefully with safe checks
+    const imageUrl =
+      item.image && typeof item.image === 'string'
+        ? item.image.startsWith('http')
+          ? item.image
+          : `${BACKEND_URL}${item.image}`
+        : null;
 
     // Format date safely
     let addedDate = '-';
